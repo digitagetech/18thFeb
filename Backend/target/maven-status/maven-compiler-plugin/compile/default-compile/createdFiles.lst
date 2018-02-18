@@ -1,0 +1,8 @@
+com\ecity\backend\dao\OrdersDao.class
+com\ecity\backend\model\Supplier.class
+com\ecity\backend\UserCommandValidator.class
+com\ecity\backend\model\Category.class
+com\ecity\backend\model\User.class
+com\ecity\backend\model\Orders.class
+com\ecity\backend\model\Product.class
+com\ecity\backend\UserCommand.class

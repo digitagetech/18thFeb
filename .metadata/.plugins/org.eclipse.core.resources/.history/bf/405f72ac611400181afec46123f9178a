@@ -1,0 +1,19 @@
+package com.ecity.backend.Backend;
+
+import backend.AnnotationConfigApplicationContext;
+import backend.ApplicationContext;
+import backend.ApplicationContextConfig;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        ApplicationContext c=new AnnotationConfigApplicationContext(ApplicationContextConfig.class);
+    }
+}

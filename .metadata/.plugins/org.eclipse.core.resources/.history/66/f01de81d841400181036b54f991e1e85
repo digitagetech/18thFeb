@@ -1,0 +1,7 @@
+package com.ecity.backend;
+
+import junit.framework.TestCase;
+
+public class TestImpl1 extends TestCase {
+
+}

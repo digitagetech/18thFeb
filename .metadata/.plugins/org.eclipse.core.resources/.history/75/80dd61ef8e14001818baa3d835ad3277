@@ -1,0 +1,54 @@
+package com.ecity.backend.Backend;
+
+import static org.junit.Assert.*;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ecity.backend.dao.CategoryDao;
+import com.ecity.backend.dao.SupplierDao;
+import com.ecity.backend.model.Category;
+import com.ecity.backend.model.Supplier;
+import com.ecity.backend.model.Product;
+
+public class TestMe  {
+	
+	@Autowired static AnnotationConfigApplicationContext context;
+	 static CategoryDao  categoryDAO;
+    static SupplierDao supplierDAO;
+
+	@BeforeClass
+	public static void initialize()
+	{
+		context = new AnnotationConfigApplicationContext();
+		context.scan("com.ecity.backend");
+		context.refresh();
+
+		categoryDAO =  (CategoryDao) context.getBean("categoryDAO");
+		supplierDAO=(SupplierDao)context.getBean("supplierDAO");
+
+	}
+	
+	@Test
+	public void updateTestCase()
+	{
+		
+		Supplier supp=new Supplier();
+		supp.setSid(111);
+		supp.setSupplierName("jayashree");
+		supplierDAO.insertSupplier(supp);
+		assertEquals(supp.getSid(), supp.getSid());
+		
+		Product prod = new Product();
+		prod.setId(1);
+		prod.setName("laptop");
+		prod.setDescription("lenovo Lptop");
+		prod.setPrice(10.0);
+		prod.setStock(10);
+		
+
+	}
+
+}

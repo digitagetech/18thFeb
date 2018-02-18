@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+ 
+ <view-state id="test" view="acknowledgement.jsp">
+ <transition on="re" to="ne"></transition>
+ </view-state>
+	
+	<view-state id="ne" view="../index.jsp"></view-state>
+ <!-- 
+ 
+     <var name="cart" class="com.ecity.backend.Cart" />
+     <view-state id="start" view="flows/test"></view-state>
+ 
+ <end-state id="home" view="externalRedirect:contextRelative:/"></end-state>
+ <global-transitions>
+ <transition on="home" to="home"></transition>
+ </global-transitions>
+ <view-state id="start" view="flows/details.jsp">
+        <transition on="addToCart" to="cartInfo" />
+        
+    </view-state>
+  <action-state id="addCartToOrder">
+        <transition on="addToCart" to="cartInfo"/>
+    </action-state>
+  
+ 
+ 
+ <view-state id="cartInfo" view="cart.jsp" model="cart">
+        <transition on="cShopping" to="toContinueShop"/>
+        <transition on="checkout" to="toCheckout" />
+        
+    </view-state>
+ 
+ <view-state id="toContinueShop" view="checkout.jsp"  model="cart">
+ <transition on="proceed" to="toproceed"></transition>
+ <transition on="notProceed" to="cancelCheckout"></transition>
+ <transition  on=""></transition>
+ </view-state>
+ 
+ 
+ <view-state id="toproceed" view="invoice.jsp">
+  <transition on="invoice" to="acknowledgement"/>
+</view-state>
+ 
+ <view-state id="acknowledgement" view="acknowledgement.jsp">
+ <transition to="endstate" />
+ </view-state>
+ <end-state id="endstate"/>
+<end-state id="cancelCheckout" view="index.jsp" />
+  
+ 
+	 -->
+</flow>
